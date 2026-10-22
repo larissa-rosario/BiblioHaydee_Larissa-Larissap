@@ -59,5 +59,17 @@ public class Usuario {
         this.nome = novoNome;
     }
 
+    public void setTipo(String novoTipo) {
+        if (novoTipo == null ||
+                (!novoTipo.equals("ALUNO") &&
+                        !novoTipo.equals("PROFESSOR"))) {
+            throw new IllegalArgumentException(
+                    "O tipo deve ser ALUNO ou PROFESSOR."
+            );
+        }
+
+        this.tipo = novoTipo;
+    }
+
 }
 
